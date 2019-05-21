@@ -9,12 +9,13 @@ public class AutoTest {
 	@Test
 	public void testEncendidoOk() throws Exception { //el exception es la mas general si tengo 14 tengo que declarar las 14
 		Auto auto = new Auto();
-		auto.setCombustible(14.0);
+		auto.setCombustible(13.986);
 
 		auto.encender(); //lo extiendo de excepcion comun porque no me importa si se rompe el test
 
-		Assert.assertEquals(70, auto.getTemperatura());
-		Assert.assertEquals(13.986, auto.getCombustible(),0.0001); //el tercer parametro es la precicion esto lo pide por usar double
+		//subo una linnea
+		
+		//el tercer parametro es la precicion esto lo pide por usar double
 		Assert.assertTrue(auto.isEncendido());
 
 	}
